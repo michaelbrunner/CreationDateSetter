@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreationDateSetter", "src\CreationDateSetter.Main\CreationDateSetter.csproj", "{263273E8-5C76-4DAE-B117-41A2175A56C8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreationDateSetter.Tests", "tests\CreationDateSetter.Tests\CreationDateSetter.Tests\CreationDateSetter.Tests.csproj", "{B5D5B03B-6AFF-4F4F-89A0-B9FCC798329B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreationDateSetter.Tests", "tests\CreationDateSetter.Tests\CreationDateSetter.Tests\CreationDateSetter.Tests.csproj", "{B5D5B03B-6AFF-4F4F-89A0-B9FCC798329B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/obj
+.vs
+/src/CreationDateSetter.Main/bin
+/src/CreationDateSetter.Main/obj
+/src/CreattionDateSetter.Main/obj
+/tests/CreationDateSetter.Tests/CreationDateSetter.Tests/bin
+/tests/CreationDateSetter.Tests/CreationDateSetter.Tests/obj
