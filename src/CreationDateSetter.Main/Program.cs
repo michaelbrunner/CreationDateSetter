@@ -23,7 +23,7 @@ namespace CreationDateSetter.Main
                         withSubfolder = true;
                         break;
                     default:
-                        Console.WriteLine($"{args[0]} is not valid.");
+                        Console.WriteLine($"{args[1]} is not valid.");
                         Console.WriteLine("Usage: CreationDateSetter <path> [-s]");
                         return;
                 }
