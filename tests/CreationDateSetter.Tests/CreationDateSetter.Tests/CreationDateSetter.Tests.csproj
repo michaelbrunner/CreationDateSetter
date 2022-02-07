@@ -29,11 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="testFolder\" />
-    <Folder Include="testFolder\subfolder\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="testFolder\2021-10-15_file2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -50,6 +45,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="testFolder\MehrereDatum_2022-01-12_teil2_2021-12-12.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="testFolder\subfolder\2021-10-15_file2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="testFolder\subfolder\FalschesFormat_2022-02.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

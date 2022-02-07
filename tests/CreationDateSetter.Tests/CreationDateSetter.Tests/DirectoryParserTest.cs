@@ -14,17 +14,19 @@ namespace CreationDateSetter.Tests
             this.output = output;
         }
 
-        [Fact]
-        public void ParseExistingDirectory()
+        [Theory]
+        [InlineData(false, 6)]
+        [InlineData(true, 8)]
+        public void DirectoryParser_ParseExistingDirectory_Success(bool withSubfolder, int expectedFiles)
         {
             //Arrange
             var path = "testFolder";
 
             //Act
-            var result = DirectoryParser.ParseDirectory(path);
+            var result = DirectoryParser.ParseDirectory(path, withSubfolder);
 
             //Assert
-            Assert.True(result.Count == 6);
+            Assert.True(result.Count == expectedFiles);
             
             foreach (var entry in result)
             {
