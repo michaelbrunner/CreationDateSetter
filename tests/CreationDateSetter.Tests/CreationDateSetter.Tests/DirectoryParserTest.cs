@@ -14,22 +14,21 @@ namespace CreationDateSetter.Tests
             this.output = output;
         }
 
-        [Theory]
-        [InlineData("C:\\eplatform\\Repos\\learn\\CreationDateSetter\\tests\\CreationDateSetter.Tests\\CreationDateSetter.Tests\\testFolder")]
-        [InlineData("testFolder")]
-        public void ParseExistingDirectory(string path)
+        [Fact]
+        public void ParseExistingDirectory()
         {
             //Arrange
-            Directory.SetCurrentDirectory(@"C:\eplatform\Repos\learn\CreationDateSetter\tests\CreationDateSetter.Tests\CreationDateSetter.Tests");
-            output.WriteLine($"current directory: {Directory.GetCurrentDirectory()}");
+            var path = "testFolder";
 
             //Act
-            DirectoryParser parser = new DirectoryParser();
-            var result = parser.ParseDirectory(path);
+            var result = DirectoryParser.ParseDirectory(path);
 
+            //Assert
+            Assert.True(result.Count == 6);
+            
             foreach (var entry in result)
             {
-                output.WriteLine($"Filename: {entry}");
+                output.WriteLine($"Filename: {entry.fileName} | AbsolutePath: {entry.absolutePath}");
             }
 
         }

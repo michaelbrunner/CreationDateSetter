@@ -5,6 +5,10 @@
     <Nullable>enable</Nullable>
 
     <IsPackable>false</IsPackable>
+
+    <Configurations>Debug;Release;Test;x64</Configurations>
+
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,11 +26,32 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\CreationDateSetter.Main\CreationDateSetter.csproj" />
-    <ProjectReference Include="..\..\..\src\CreattionDateSetter.Main\CreationDateSetter.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="testFolder\" />
+    <Folder Include="testFolder\subfolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="testFolder\2021-10-15_file2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="testFolder\FalschesFormat_2022-02.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="testFolder\file1_2022-01-20.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="testFolder\file3_2022-02-02_test.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="testFolder\KeinDatum.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="testFolder\MehrereDatum_2022-01-12_teil2_2021-12-12.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

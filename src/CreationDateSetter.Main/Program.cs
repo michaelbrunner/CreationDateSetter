@@ -1,4 +1,6 @@
-﻿namespace CreationDateSetter.Main
+﻿using CreationDateSetter.Main.Exceptions;
+
+namespace CreationDateSetter.Main
 {
     public class CreationDateSetter
     {
@@ -11,20 +13,30 @@
         {
             if (Directory.Exists(path))
             {
-                string[] fileEntries = Directory.GetFiles(path);
-                foreach (string fileName in fileEntries)
+                var files = DirectoryParser.ParseDirectory(path);
+                
+                foreach (var (fileName, absolutePath) in files)
                 {
-                    Console.WriteLine(fileName);
+                    try
+                    {
+                        var creationDate = FileParser.ParseDateInFilename(fileName);
+                        FileModifier.ChangeCreationDate(absolutePath, creationDate);   
+                    }
+                    catch (NoDateFoundException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    catch (FormatException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
                 }
             }
             else
             {
-                //handle exception case
+                Console.WriteLine($"Directory {path} does not exist!");
             }
 
-
-
         }
-
     }
 }

@@ -9,3 +9,5 @@
 /src/CreattionDateSetter.Main/obj
 /tests/CreationDateSetter.Tests/CreationDateSetter.Tests/bin
 /tests/CreationDateSetter.Tests/CreationDateSetter.Tests/obj
+/src/CreationDateSetter.Main/Properties/PublishProfiles
+/src/CreationDateSetter.Main/CreationDateSetter.csproj.user
