@@ -12,9 +12,10 @@ namespace CreationDateSetter.Main
         /// Return all files in a given directory.
         /// </summary>
         /// <param name="path">Absoulute or relative path</param>
+        /// <param name="withSubfolder">flag to parse subfoldes or not</param>
         /// <returns>List of tuples containing the filename and the absolute path to this file</returns>
         /// <exception cref="DirectoryNotFoundException"></exception>
-        public static List<(string fileName, string absolutePath)> ParseDirectory(string path)
+        public static List<(string fileName, string absolutePath)> ParseDirectory(string path, bool withSubfolder)
         {
 
             if (Directory.Exists(path))
@@ -23,7 +24,7 @@ namespace CreationDateSetter.Main
                 var fullPath = Path.GetFullPath(path);  
 
                 var result = new List<(string fileName, string absolutePath)>();
-                var files = Directory.EnumerateFiles(fullPath, "*", SearchOption.TopDirectoryOnly);
+                var files = Directory.EnumerateFiles(fullPath, "*", (withSubfolder ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly));
 
                 foreach (string currentFile in files)
                 {
